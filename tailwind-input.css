@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@source "./index.html";
+@source "./about.html";
+@source "./review.html";
+
+@theme {
+  --color-mama-pink: #e5005a;
+  --color-mama-soft: #fceaf2;
+  --color-mama-green: #39a935;
+  --color-mama-blue: #009ee2;
+  --color-mama-text: #2f2f35;
+}

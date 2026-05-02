@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "MamaSans";
+  src: local("Arial");
+}
+
+:root {
+  --mama-pink: #e5005a;
+  --mama-soft: #fceaf2;
+  --mama-green: #39a935;
+  --mama-blue: #009ee2;
+  --mama-text: #2f2f35;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: MamaSans, Arial, Helvetica, sans-serif;
+  color: var(--mama-text);
+}
+
+.brand-shadow {
+  box-shadow: 0 0.375rem 1rem rgb(47 47 53 / 16%);
+}
+
+.quote-card::before,
+.quote-card::after {
+  color: #f3f3f3;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  position: absolute;
+}
+
+.quote-card::before {
+  content: "“";
+  left: 1.5rem;
+  top: 0.75rem;
+}
+
+.quote-card::after {
+  content: "”";
+  bottom: 0.25rem;
+  right: 1.5rem;
+}
+
+.video-tile > div {
+  display: none;
+}
+
+.story-card::after {
+  background: linear-gradient(to top, rgb(0 0 0 / 72%), transparent 65%);
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  position: absolute;
+}

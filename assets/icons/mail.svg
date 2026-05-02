@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+  <g id="mail" transform="translate(-445.934 -4735.934)">
+    <g id="Ellipse_1315" data-name="Ellipse 1315" transform="translate(445.934 4735.935)" fill="#de0860" stroke="#fff" stroke-width="1">
+      <circle cx="28" cy="28" r="28" stroke="none"/>
+      <circle cx="28" cy="28" r="27.5" fill="none"/>
+    </g>
+    <path id="Mail-2" data-name="Mail" d="M91.115,160H65a1,1,0,0,0-1,1v20.085a1,1,0,0,0,1,1h26.11a1,1,0,0,0,1-1V161a1,1,0,0,0-1-1Zm-2.536,3.418-9.9,7.7a.674.674,0,0,1-.832,0l-9.9-7.7a.226.226,0,0,1,.136-.4h20.36a.226.226,0,0,1,.138.4Z" transform="translate(395.934 4592.934)" fill="#fff"/>
+  </g>
+</svg>
