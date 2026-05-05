@@ -109,6 +109,18 @@ body {
   display: none;
 }
 
+.vacancy-list li {
+  align-items: center;
+  column-gap: 0.875rem;
+  display: flex;
+}
+
+.vacancy-list img {
+  flex: none;
+  height: 0.75rem;
+  width: auto;
+}
+
 #stories {
   max-width: 87rem;
 }
@@ -230,6 +242,11 @@ body {
   height: 333px;
   object-fit: cover;
   width: 100%;
+}
+
+.story-carousel .story-card:nth-child(-n + 4) img {
+  height: 27rem;
+  transform: translateY(-5.5rem);
 }
 
 .social-links a {
