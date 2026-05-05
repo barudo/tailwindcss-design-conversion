@@ -153,6 +153,11 @@ body {
   padding-inline: 2rem;
 }
 
+.review-band {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
 .review-card {
   background: #fff;
   border-radius: 0.25rem;
