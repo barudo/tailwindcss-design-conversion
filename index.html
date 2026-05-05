@@ -9,22 +9,29 @@
   </head>
   <body class="bg-white text-mama-text">
     <header class="sticky top-0 z-50 bg-mama-pink">
-      <nav class="mx-auto flex h-[4.5rem] max-w-[75rem] items-center justify-between px-[1.5rem]">
+      <nav class="relative mx-auto flex h-[4.5rem] max-w-[75rem] items-center justify-between px-[1.5rem]">
         <a href="index.html" aria-label="Kraamzorg Mama"><img class="h-[2.7rem] w-auto" src="assets/images/logo-white.png" alt="Kraamzorg Mama" /></a>
-        <button class="text-[1.75rem] font-black text-white md:hidden">☰</button>
+        <button class="mobile-menu__button text-[1.75rem] font-black text-white md:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu openen" data-mobile-menu-button>☰</button>
         <div class="hidden items-center gap-[2.4rem] text-[0.9rem] font-black text-white md:flex">
           <a href="about.html">Wie zijn wij?</a>
           <a href="review.html">Ervaringen</a>
-          <a href="#">Intake &amp; kraamtijd</a>
-          <a href="#">Kosten &amp; verzekering</a>
-          <a class="rounded-[0.25rem] bg-mama-green px-[2rem] py-[0.9rem]" href="#">Aanvragen</a>
+          <a href="index.html#vragen">Intake &amp; kraamtijd</a>
+          <a href="index.html#vragen">Kosten &amp; verzekering</a>
+          <a class="rounded-[0.25rem] bg-mama-green px-[2rem] py-[0.9rem]" href="index.html#aanvragen">Aanvragen</a>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" hidden data-mobile-menu>
+          <a href="about.html">Wie zijn wij?</a>
+          <a href="review.html">Ervaringen</a>
+          <a href="index.html#vragen">Intake &amp; kraamtijd</a>
+          <a href="index.html#vragen">Kosten &amp; verzekering</a>
+          <a class="mobile-menu__cta" href="index.html#aanvragen">Aanvragen</a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="relative min-h-[40rem] bg-[url('assets/images/careers-photo.png')] bg-cover bg-center md:min-h-[43rem]">
-        <div class="mx-auto max-w-[75rem] px-[1.5rem] py-[2rem] md:py-[1.5rem]">
+      <section class="career-hero relative md:min-h-[43rem]">
+        <div class="career-hero__content mx-auto max-w-[75rem] px-[1.5rem] py-[2rem] md:py-[1.5rem]">
           <div class="brand-shadow max-w-[43.75rem] bg-white p-[2rem] md:p-[3rem]">
             <h1 class="max-w-[36rem] text-[2.25rem] font-black leading-[1.18] md:text-[3rem]">Werken bij de beste kraambureau um NL</h1>
             <ul class="mt-[2rem] space-y-[1.3rem] text-[1.15rem] leading-[1.55] md:text-[1.45rem]">
@@ -35,7 +42,7 @@
               <li class="flex gap-[1.4rem]"><span class="text-[1.7rem] font-black text-green-600">✓</span><span><strong>Alle zorgverzekeraars</strong> vergoeden onze zorg</span></li>
               <li class="flex gap-[1.4rem]"><span class="text-[1.7rem] font-black text-green-600">✓</span><span>Wij zijn een <strong>Borstvoeding en ISO/HKZ</strong> gecertificeerde instelling</span></li>
             </ul>
-            <a class="mt-[1.8rem] inline-flex items-center gap-[1rem] rounded-[0.25rem] bg-mama-green px-[2rem] py-[1rem] text-[1rem] font-black text-white shadow-lg" href="#">Vraag direct kraamzorg aan <span class="grid size-[1.6rem] place-items-center rounded-full bg-white text-mama-green">➜</span></a>
+            <a class="mt-[1.8rem] inline-flex items-center gap-[1rem] rounded-[0.25rem] bg-mama-green px-[2rem] py-[1rem] text-[1rem] font-black text-white shadow-lg" href="index.html#aanvragen">Vraag direct kraamzorg aan <span class="grid size-[1.6rem] place-items-center rounded-full bg-white text-mama-green">➜</span></a>
           </div>
         </div>
       </section>
@@ -59,7 +66,7 @@
         </div>
       </section>
 
-      <section class="bg-mama-soft py-[4.5rem]">
+      <section id="reviews" class="bg-mama-soft py-[4.5rem]">
         <div class="mx-auto max-w-[75rem] px-[1.5rem]">
           <h2 class="text-center text-[2rem] font-black text-mama-pink">Kies een werkprofiel dat bij jou past!</h2>
           <div class="mt-[2rem] grid gap-[1rem] md:grid-cols-4">
@@ -71,51 +78,216 @@
         </div>
       </section>
 
-      <section class="mx-auto max-w-[75rem] px-[1.5rem] py-[4.5rem]">
+      <section id="stories" class="mx-auto max-w-[75rem] px-[1.5rem] py-[4.5rem]">
         <h2 class="text-center text-[2rem] font-black text-mama-pink">Verhalen uit het werkvloer</h2>
-        <div class="mt-[2rem] grid gap-[0.8rem] md:grid-cols-4">
-          <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-1.png" alt="" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Annemiek - "There is always someone there for you"</p></article>
-          <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-2.png" alt="" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Corrie - "They do take travel distances into account"</p></article>
-          <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-3.png" alt="" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Mariska - "I was not abandoned in that deep valley"</p></article>
-          <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-4.png" alt="" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Sorayah - "She convinced me that this organization was really different"</p></article>
+        <div class="story-carousel mt-[2rem]" data-carousel>
+          <button class="story-carousel__control story-carousel__control--prev" type="button" aria-label="Vorige verhaal" data-carousel-prev>
+            <img src="assets/icons/Slider - Left arrow.svg" alt="" />
+          </button>
+          <div class="story-carousel__viewport" data-carousel-viewport>
+            <div class="story-carousel__track" data-carousel-track>
+              <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-1.png" alt="Annemiek" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Annemiek - "There is always someone there for you"</p></article>
+              <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-2.png" alt="Corrie" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Corrie - "They do take travel distances into account"</p></article>
+              <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-3.png" alt="Mariska" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Mariska - "I was not abandoned in that deep valley"</p></article>
+              <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-4.png" alt="Sorayah" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Sorayah - "She convinced me that this organization was really different"</p></article>
+              <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-5.jpg" alt="Ellen" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Ellen - "Samen staan we sterk in de kraamzorg"</p></article>
+              <article class="story-card relative overflow-hidden rounded-[0.25rem]"><img src="assets/images/story-6.jpg" alt="Linda" /><p class="absolute bottom-[1rem] z-10 px-[0.8rem] text-[0.85rem] font-black text-white">Linda - "Elke dag maak je verschil voor een gezin"</p></article>
+            </div>
+          </div>
+          <button class="story-carousel__control story-carousel__control--next" type="button" aria-label="Volgende verhaal" data-carousel-next>
+            <img src="assets/icons/Slider - right arrow.svg" alt="" />
+          </button>
+          <div class="story-carousel__dots" aria-label="Verhalen navigatie" data-carousel-dots></div>
         </div>
       </section>
 
       <section class="bg-mama-soft py-[4.5rem]">
         <div class="mx-auto max-w-[75rem] px-[1.5rem]">
           <h2 class="text-center text-[2rem] font-black text-mama-pink">Wat vinden andere moeders van onze kraamzorg?</h2>
-          <div class="mt-[2rem] grid gap-[1.25rem] md:grid-cols-3">
-            <article class="bg-white p-[1.5rem] text-[0.9rem] leading-[1.6]">Je voelt je geen nummer. Je wordt gewaardeerd, zoals je bent. Maak je wensen kenbaar.</article>
-            <article class="bg-white p-[1.5rem] text-[0.9rem] leading-[1.6]">Werken bij kraamzorg mama heeft mij weer in laten zien dat mijn hart bij de kraamzorg ligt.</article>
-            <article class="bg-white p-[1.5rem] text-[0.9rem] leading-[1.6]">Een superfijne werkgever! Het voelt als 1 grote familie, altijd iemand waar je terecht kan.</article>
+          <div class="story-carousel review-carousel mt-[2rem]" data-carousel data-carousel-desktop-count="3" data-carousel-label="ervaring">
+            <button class="story-carousel__control story-carousel__control--prev" type="button" aria-label="Vorige ervaring" data-carousel-prev>
+              <img src="assets/icons/Slider - Left arrow.svg" alt="" />
+            </button>
+            <div class="story-carousel__viewport" data-carousel-viewport>
+              <div class="story-carousel__track" data-carousel-track>
+                <article class="review-card">
+                  <img class="review-card__logo" src="assets/icons/Indeed_logo.svg" alt="Indeed" />
+                  <p>Je voelt je geen nummer. Je wordt gewaardeerd, zoals je bent. Maak je wensen kenbaar.</p>
+                </article>
+                <article class="review-card">
+                  <img class="review-card__logo" src="assets/icons/Indeed_logo.svg" alt="Indeed" />
+                  <p>Werken bij kraamzorg mama heeft mij weer in laten zien dat mijn hart bij de kraamzorg ligt.</p>
+                </article>
+                <article class="review-card">
+                  <img class="review-card__logo" src="assets/icons/Indeed_logo.svg" alt="Indeed" />
+                  <p>Een superfijne werkgever! Het voelt als 1 grote familie, altijd iemand waar je terecht kan.</p>
+                </article>
+                <article class="review-card">
+                  <img class="review-card__logo" src="assets/icons/Indeed_logo.svg" alt="Indeed" />
+                  <p>Ik voel mij op mijn gemak en erg gehoord. Leuke collega's waar je altijd bij terecht kan als er iets is.</p>
+                </article>
+                <article class="review-card">
+                  <img class="review-card__logo" src="assets/icons/Indeed_logo.svg" alt="Indeed" />
+                  <p>Bij kraamzorg mama ben je geen personeel maar een persoon. Er wordt met je meegedacht.</p>
+                </article>
+              </div>
+            </div>
+            <button class="story-carousel__control story-carousel__control--next" type="button" aria-label="Volgende ervaring" data-carousel-next>
+              <img src="assets/icons/Slider - right arrow.svg" alt="" />
+            </button>
+            <div class="story-carousel__dots" aria-label="Ervaringen navigatie" data-carousel-dots></div>
           </div>
         </div>
       </section>
 
-      <section class="mx-auto max-w-[75rem] px-[1.5rem] py-[4.5rem] text-center">
+      <section id="vragen" class="mx-auto max-w-[75rem] px-[1.5rem] py-[4.5rem] text-center">
         <h2 class="text-[2rem] font-black text-mama-pink">Heb je nog vragen?</h2>
         <p class="mx-auto mt-[1.3rem] max-w-[56rem] leading-[1.7]">De mens houdt van nature niet van al te veel verandering. Stel deze gerust!</p>
-        <div class="mt-[2rem] divide-y border text-left text-[0.9rem] font-bold">
-          <p class="flex justify-between p-[1rem]">Volgt KraamZus de cao of zijn er ook extra voordelen? <span class="text-mama-pink">⌄</span></p>
-          <p class="flex justify-between p-[1rem]">Welke contractvormen zijn er mogelijk? <span class="text-mama-pink">⌄</span></p>
-          <p class="flex justify-between p-[1rem]">Biedt KraamZus een interne opleiding aan? <span class="text-mama-pink">⌄</span></p>
-          <p class="flex justify-between p-[1rem]">Kan ik bij KraamZus combineren met kleine kinderen? <span class="text-mama-pink">⌄</span></p>
+        <div class="faq-accordion mt-[2rem] border text-left text-[0.9rem]" data-accordion>
+          <div class="faq-accordion__item">
+            <button class="faq-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-panel-1">
+              <span>Volgt Kraamzorg Mama de cao of zijn er ook extra voordelen?</span>
+              <span class="faq-accordion__icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-accordion__panel" id="faq-panel-1" hidden>
+              <p>Ja, wij volgen de geldende cao en denken daarnaast mee over wat jij nodig hebt om prettig te kunnen werken.</p>
+            </div>
+          </div>
+          <div class="faq-accordion__item">
+            <button class="faq-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-panel-2">
+              <span>Welke contractvormen zijn er mogelijk?</span>
+              <span class="faq-accordion__icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-accordion__panel" id="faq-panel-2" hidden>
+              <p>Er zijn verschillende contractvormen mogelijk. Samen kijken we welke vorm past bij jouw beschikbaarheid en werkprofiel.</p>
+            </div>
+          </div>
+          <div class="faq-accordion__item">
+            <button class="faq-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-panel-3">
+              <span>Biedt Kraamzorg Mama een interne opleiding aan?</span>
+              <span class="faq-accordion__icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-accordion__panel" id="faq-panel-3" hidden>
+              <p>Ja, cursussen en ontwikkelmogelijkheden worden intern aangeboden, zodat je kunt blijven groeien in je vak.</p>
+            </div>
+          </div>
+          <div class="faq-accordion__item">
+            <button class="faq-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-panel-4">
+              <span>Kan ik bij Kraamzorg Mama combineren met kleine kinderen?</span>
+              <span class="faq-accordion__icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-accordion__panel" id="faq-panel-4" hidden>
+              <p>Ja, we houden waar mogelijk rekening met jouw situatie en zoeken samen naar een werkvorm die past bij je gezin.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="bg-mama-pink text-white">
-      <section class="bg-mama-soft py-[3rem] text-mama-text">
+      <section id="aanvragen" class="bg-mama-soft py-[3rem] text-mama-text">
         <div class="mx-auto max-w-[75rem] px-[1.5rem] text-center">
           <h2 class="text-[1.5rem] text-mama-pink"><strong>Vragen?</strong> Neem contact op met Ellen van Bellen</h2>
-          <div class="mt-[2rem] flex flex-wrap justify-center gap-[2rem] text-[1rem]"><span>☎ 085 - 1051909</span><span>☘ WhatsApp</span><span>✉ contact@kraamzorgmama.nl</span></div>
+          <div class="contact-links mt-[2rem] flex flex-wrap justify-center gap-[2rem] text-[1rem]"><span><img src="assets/icons/call.svg" alt="" />085 - 1051909</span><span><img src="assets/icons/whatsapp.svg" alt="" />WhatsApp</span><span><img src="assets/icons/mail.svg" alt="" />contact@kraamzorgmama.nl</span></div>
         </div>
       </section>
       <div class="mx-auto grid max-w-[75rem] gap-[3rem] px-[1.5rem] py-[4rem] md:grid-cols-2">
         <div><h3 class="font-black">Vragen over Werken bij Kraamzorg Mama?</h3><p class="mt-[1rem] max-w-[20rem] text-[0.95rem] font-bold leading-[1.7]">Neem contact op met onze recruiters via contact@kraamzorgmama.nl</p><h3 class="mt-[2.5rem] font-black">Weet je nog niet precies wat je wilt?</h3><p class="mt-[1rem] max-w-[26rem] text-[0.95rem] font-bold leading-[1.7]">Start in een specialisme van jouw interesse en ontdek in een jaar welke plek het best bij jou past?</p><a class="mt-[1rem] inline-block font-black">› Bekijk startersbanen</a></div>
-        <div class="md:pl-[8rem]"><h3 class="text-[1.6rem] font-black">Volg Kraamzorg Mama:</h3><div class="mt-[1rem] flex gap-[1rem] text-[1.5rem]"><span class="grid size-[3rem] place-items-center rounded-full bg-white text-mama-pink">f</span><span class="grid size-[3rem] place-items-center rounded-full bg-white text-mama-pink">◎</span><span class="grid size-[3rem] place-items-center rounded-full bg-white text-mama-pink">▶</span></div><p class="mt-[1rem] font-bold">Ga naar kraamzorgmama.nl ⧉</p><ul class="mt-[2.5rem] space-y-[1rem] font-bold"><li>› Alle vacatures</li><li>› Onze culture</li><li>› Specialismes</li></ul></div>
+        <div class="md:pl-[8rem]"><h3 class="text-[1.6rem] font-black">Volg Kraamzorg Mama:</h3><div class="social-links mt-[1rem] flex gap-[1rem]"><a href="#" aria-label="Facebook"><img src="assets/icons/Facebook.svg" alt="" /></a><a href="#" aria-label="Instagram"><img src="assets/icons/Instagram.svg" alt="" /></a><a href="#" aria-label="YouTube"><img src="assets/icons/Youtube.svg" alt="" /></a></div><p class="mt-[1rem] font-bold">Ga naar kraamzorgmama.nl ⧉</p><ul class="mt-[2.5rem] space-y-[1rem] font-bold"><li>› Alle vacatures</li><li>› Onze culture</li><li>› Specialismes</li></ul></div>
       </div>
       <p class="pb-[1.5rem] text-center text-[0.8rem]">Privacy | Cookies</p>
     </footer>
+    <script>
+      document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+        const viewport = carousel.querySelector("[data-carousel-viewport]");
+        const track = carousel.querySelector("[data-carousel-track]");
+        const slides = Array.from(track.children);
+        const previous = carousel.querySelector("[data-carousel-prev]");
+        const next = carousel.querySelector("[data-carousel-next]");
+        const dots = carousel.querySelector("[data-carousel-dots]");
+        let activeIndex = 0;
+        let maxIndex = 0;
+
+        function visibleSlides() {
+          const desktopCount = Number(carousel.dataset.carouselDesktopCount || 4);
+          return window.matchMedia("(min-width: 48rem)").matches ? desktopCount : 1;
+        }
+
+        function updateMaxIndex() {
+          maxIndex = Math.max(slides.length - visibleSlides(), 0);
+          activeIndex = Math.min(activeIndex, maxIndex);
+        }
+
+        function renderDots() {
+          const itemLabel = carousel.dataset.carouselLabel || "verhaal";
+          dots.replaceChildren();
+          for (let index = 0; index <= maxIndex; index += 1) {
+            const dot = document.createElement("button");
+            dot.type = "button";
+            dot.setAttribute("aria-label", `Ga naar ${itemLabel} ${index + 1}`);
+            dot.addEventListener("click", () => setActiveSlide(index));
+            dots.appendChild(dot);
+          }
+        }
+
+        function setActiveSlide(index) {
+          updateMaxIndex();
+          activeIndex = Math.max(0, Math.min(index, maxIndex));
+          const slideLeft = slides[activeIndex].offsetLeft - track.offsetLeft;
+          viewport.scrollTo({ left: slideLeft, behavior: "smooth" });
+          updateControls();
+        }
+
+        function updateControls() {
+          Array.from(dots.children).forEach((dot, index) => {
+            dot.toggleAttribute("aria-current", index === activeIndex);
+          });
+          previous.disabled = activeIndex === 0;
+          next.disabled = activeIndex === maxIndex;
+        }
+
+        previous.addEventListener("click", () => setActiveSlide(activeIndex - 1));
+        next.addEventListener("click", () => setActiveSlide(activeIndex + 1));
+        window.addEventListener("resize", () => {
+          updateMaxIndex();
+          renderDots();
+          setActiveSlide(activeIndex);
+        });
+        updateMaxIndex();
+        renderDots();
+        updateControls();
+      });
+
+      document.querySelectorAll("[data-accordion]").forEach((accordion) => {
+        const triggers = accordion.querySelectorAll(".faq-accordion__trigger");
+        triggers.forEach((trigger) => {
+          trigger.addEventListener("click", () => {
+            const panel = document.getElementById(trigger.getAttribute("aria-controls"));
+            const isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+            triggers.forEach((itemTrigger) => {
+              const itemPanel = document.getElementById(itemTrigger.getAttribute("aria-controls"));
+              itemTrigger.setAttribute("aria-expanded", "false");
+              itemPanel.hidden = true;
+            });
+
+            trigger.setAttribute("aria-expanded", String(!isOpen));
+            panel.hidden = isOpen;
+          });
+        });
+      });
+
+      const mobileMenuButton = document.querySelector("[data-mobile-menu-button]");
+      const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          const isOpen = mobileMenuButton.getAttribute("aria-expanded") === "true";
+          mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+          mobileMenuButton.setAttribute("aria-label", isOpen ? "Menu openen" : "Menu sluiten");
+          mobileMenu.hidden = isOpen;
+        });
+      }
+    </script>
   </body>
 </html>

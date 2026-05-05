@@ -24,6 +24,66 @@ body {
   box-shadow: 0 0.375rem 1rem rgb(47 47 53 / 16%);
 }
 
+.mobile-menu {
+  background: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1.5rem rgb(47 47 53 / 22%);
+  color: var(--mama-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.75rem;
+  position: absolute;
+  right: 1.5rem;
+  top: calc(100% + 0.5rem);
+  width: min(18rem, calc(100vw - 3rem));
+  z-index: 60;
+}
+
+.mobile-menu a {
+  border-radius: 0.2rem;
+  display: block;
+  padding: 0.8rem 0.9rem;
+}
+
+.mobile-menu a + a {
+  margin-top: 0.15rem;
+}
+
+.mobile-menu__cta {
+  background: var(--mama-green);
+  color: #fff;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.career-hero {
+  background-image: url("assets/images/careers-hero-full.jpg");
+  background-position: 72% top;
+  background-repeat: no-repeat;
+  background-size: auto 24rem;
+  padding-top: 24rem;
+}
+
+.career-hero__content {
+  background: #fff;
+}
+
+@media (min-width: 48rem) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .career-hero {
+    background-position: right top;
+    background-size: cover;
+    padding-top: 0;
+  }
+
+  .career-hero__content {
+    background: transparent;
+  }
+}
+
 .quote-card::before,
 .quote-card::after {
   color: #f3f3f3;
@@ -49,10 +109,218 @@ body {
   display: none;
 }
 
+#stories {
+  max-width: 87rem;
+}
+
+.story-carousel {
+  padding-inline: 2.75rem;
+  position: relative;
+}
+
+.story-carousel__viewport {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.story-carousel__track {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.story-carousel .story-card {
+  flex: 0 0 304px;
+  height: 333px;
+}
+
+.review-carousel .story-carousel__track {
+  gap: 1.25rem;
+}
+
+.review-carousel {
+  padding-inline: 2rem;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 0.25rem;
+  flex: 0 0 100%;
+  min-height: 16.5rem;
+  padding: 1.4rem 1.5rem 1.5rem;
+}
+
+.review-card__logo {
+  height: 1.2rem;
+  margin-left: auto;
+  width: auto;
+}
+
+.quote-card__logo {
+  height: 1.2rem;
+  width: auto;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 1.5rem;
+}
+
+.story-carousel__control {
+  align-items: center;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 0.25rem 0.75rem rgb(47 47 53 / 16%);
+  cursor: pointer;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  z-index: 2;
+}
+
+.story-carousel__control:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
+.story-carousel__control--prev {
+  left: 0;
+}
+
+.story-carousel__control--next {
+  right: 0;
+}
+
+.story-carousel__control img {
+  height: 1.25rem;
+  width: auto;
+}
+
+.story-carousel__dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.story-carousel__dots button {
+  background: #d8d8d8;
+  border-radius: 999px;
+  height: 0.55rem;
+  width: 0.55rem;
+}
+
+.story-carousel__dots button[aria-current] {
+  background: var(--mama-pink);
+}
+
 .story-card::after {
   background: linear-gradient(to top, rgb(0 0 0 / 72%), transparent 65%);
   border-radius: inherit;
   content: "";
   inset: 0;
   position: absolute;
+}
+
+.story-card img {
+  height: 333px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.social-links a {
+  background: #fff;
+  border-radius: 999px;
+  display: grid;
+  height: 3rem;
+  place-items: center;
+  width: 3rem;
+}
+
+.social-links img {
+  max-height: 1.35rem;
+  max-width: 1.35rem;
+  width: auto;
+}
+
+.contact-links span {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.6rem;
+}
+
+.contact-links img {
+  height: 2rem;
+  width: 2rem;
+}
+
+@media (max-width: 47.999rem) {
+  .contact-links {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    margin-inline: auto;
+    max-width: 100%;
+    width: max-content;
+  }
+
+  .contact-links span {
+    text-align: left;
+  }
+}
+
+.faq-accordion__item + .faq-accordion__item {
+  border-top: 1px solid currentColor;
+}
+
+.faq-accordion__trigger {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.faq-accordion__icon {
+  color: var(--mama-pink);
+  flex: 0 0 auto;
+  margin-left: 1rem;
+  transition: transform 160ms ease;
+}
+
+.faq-accordion__trigger[aria-expanded="true"] .faq-accordion__icon {
+  transform: rotate(180deg);
+}
+
+.faq-accordion__panel {
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 0 3rem 1rem 1rem;
+}
+
+@media (min-width: 48rem) {
+  .review-carousel {
+    padding-inline: 2.75rem;
+  }
+
+  .story-carousel .story-card {
+    flex-basis: 304px;
+  }
+
+  .review-carousel .review-card {
+    flex-basis: calc((100% - 2.5rem) / 3);
+  }
+}
+
+@media (max-width: 47.999rem) {
+  .story-carousel .story-card {
+    flex-basis: min(304px, 100%);
+  }
 }
