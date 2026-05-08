@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
 @font-face {
   font-family: "MamaSans";
   src: local("Arial");
@@ -18,6 +20,17 @@ html {
 body {
   font-family: MamaSans, Arial, Helvetica, sans-serif;
   color: var(--mama-text);
+}
+
+/* Apply RO Sans font to navigation links */
+nav a {
+  font-family: 'RO Sans', Calibri, sans-serif;
+}
+
+/* Apply Ubuntu Bold font to main headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
 }
 
 .brand-shadow {
@@ -107,6 +120,20 @@ body {
 
 .video-tile > div {
   display: none;
+}
+
+.work-profile-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-profile-card ul {
+  flex: 1;
+}
+
+.work-profile-card a {
+  margin-top: auto;
+  padding-top: 1.5rem;
 }
 
 .vacancy-list li {
@@ -285,7 +312,8 @@ body {
     align-items: flex-start;
     flex-direction: column;
     gap: 1rem;
-    margin-inline: auto;
+    margin-left: 0;
+    margin-right: auto;
     max-width: 100%;
     width: max-content;
   }
