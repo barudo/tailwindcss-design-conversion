@@ -10,11 +10,11 @@
   <body class="bg-white text-mama-text">
     <header class="sticky top-0 z-50 bg-mama-pink">
       <nav
-        class="relative mx-auto flex h-[4.5rem] max-w-[75rem] items-center justify-between px-[1.5rem]"
+        class="relative mx-auto flex h-[4.375rem] max-w-[75rem] items-center justify-between px-[1.5rem]"
       >
         <a href="index.html" aria-label="Kraamzorg Mama"
           ><img
-            class="h-[2.7rem] w-auto"
+            class="h-[2.75rem] w-auto"
             src="assets/images/logo-white.png"
             alt="Kraamzorg Mama"
         /></a>
@@ -54,15 +54,15 @@
     <main>
       <section class="career-hero relative md:min-h-[43rem]">
         <div
-          class="career-hero__content mx-auto max-w-[75rem] px-[1.5rem] py-[2rem] md:py-[1.5rem]"
+          class="career-hero__content mx-auto max-w-[75rem] px-[1.5rem] pb-[2rem] pt-[1.5rem] md:pb-[1.5rem] md:pt-[4.375rem]"
         >
           <div
-            class="brand-shadow max-w-[43.75rem] bg-white p-[2rem] md:p-[3rem]"
+            class="brand-shadow max-w-[45.5625rem] bg-white p-[2rem] md:p-[3rem]"
           >
             <h1
               class="max-w-[36rem] text-[2.25rem] font-black leading-[1.18] md:text-[3rem]"
             >
-              Werken bij de beste kraambureau um NL
+              Werken bij de beste kraambureau van NL
             </h1>
             <ul
               class="mt-[2rem] space-y-[1.3rem] text-[1.15rem] leading-[1.55] md:text-[1.45rem]"
@@ -143,7 +143,7 @@
       </section>
 
       <section
-        class="mx-auto grid max-w-[75rem] gap-[3rem] px-[1.5rem] py-[4.5rem] md:grid-cols-2 md:items-center md:py-[5rem]"
+        class="mx-auto grid max-w-[75rem] gap-[3rem] px-[1.5rem] pb-[4.375rem] pt-[4.375rem] md:grid-cols-2 md:items-start md:pb-[4.375rem] md:pt-[4.375rem]"
       >
         <div>
           <h2 class="text-[1.9rem] font-black leading-tight text-mama-pink">
@@ -182,7 +182,9 @@
             </li>
           </ul>
         </div>
-        <div class="video-tile relative overflow-hidden rounded-[0.2rem]">
+        <div
+          class="video-tile relative h-[25.9375rem] w-full max-w-[40.625rem] overflow-hidden rounded-[0.2rem]"
+        >
           <img
             class="h-full w-full object-cover"
             src="assets/images/video-baby.png"
@@ -192,12 +194,14 @@
             class="absolute left-[1rem] top-[1rem] border-l-[0.35rem] border-mama-pink bg-black/40 px-[1rem] py-[0.65rem] text-white"
           >
             <p class="text-[0.9rem] font-black">Waarom Kraamzorg Mama?</p>
-            <p class="text-[0.8rem]">Bekijk de video</p>
+            <p class="mt-[0.5rem] font-[Arial] text-[0.7rem]">
+              Bekijk de video
+            </p>
           </div>
         </div>
       </section>
 
-      <section id="reviews" class="bg-mama-soft pb-[4.5rem] pt-[70px]">
+      <section id="reviews" class="bg-mama-soft pb-[4.375rem] pt-[4.375rem]">
         <div class="mx-auto max-w-[75rem] px-[1.5rem]">
           <h2 class="text-center text-[2rem] font-black text-mama-pink">
             Kies een werkprofiel dat bij jou past!
@@ -432,7 +436,7 @@
 
       <section
         id="stories"
-        class="mx-auto max-w-[75rem] px-[1.5rem] py-[4.5rem]"
+        class="mx-auto max-w-[75rem] px-[1.5rem] pb-[4.375rem] pt-[4.375rem]"
       >
         <h2 class="text-center text-[2rem] font-black text-mama-pink">
           Verhalen uit het werkvloer
@@ -525,7 +529,7 @@
             data-carousel-dots
           ></div>
         </div>
-        <div class="review-band mt-[4.5rem] bg-mama-soft py-[4.5rem]">
+        <div class="review-band mt-[4.375rem] bg-mama-soft py-[4.375rem]">
           <div class="mx-auto max-w-[75rem] px-[1.5rem]">
             <h2 class="text-center text-[2rem] font-black text-mama-pink">
               Wat vinden andere moeders van onze kraamzorg?
@@ -623,7 +627,7 @@
 
       <section
         id="vragen"
-        class="mx-auto max-w-[75rem] px-[1.5rem] py-[4.5rem] text-center"
+        class="mx-auto max-w-[75rem] px-[1.5rem] pb-[4.375rem] pt-[4.375rem] text-center"
       >
         <h2 class="text-[2rem] font-black text-mama-pink">
           Heb je nog vragen?
@@ -652,7 +656,12 @@
                 >Volgt Kraamzorg Mama de cao of zijn er ook extra
                 voordelen?</span
               >
-              <span class="faq-accordion__icon" aria-hidden="true">⌄</span>
+              <img
+                class="faq-accordion__icon"
+                src="assets/icons/Down arrow - FAQ.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
             <div class="faq-accordion__panel" id="faq-panel-1" hidden>
               <p>
@@ -669,7 +678,12 @@
               aria-controls="faq-panel-2"
             >
               <span>Welke contractvormen zijn er mogelijk?</span>
-              <span class="faq-accordion__icon" aria-hidden="true">⌄</span>
+              <img
+                class="faq-accordion__icon"
+                src="assets/icons/Down arrow - FAQ.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
             <div class="faq-accordion__panel" id="faq-panel-2" hidden>
               <p>
@@ -686,7 +700,12 @@
               aria-controls="faq-panel-3"
             >
               <span>Biedt Kraamzorg Mama een interne opleiding aan?</span>
-              <span class="faq-accordion__icon" aria-hidden="true">⌄</span>
+              <img
+                class="faq-accordion__icon"
+                src="assets/icons/Down arrow - FAQ.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
             <div class="faq-accordion__panel" id="faq-panel-3" hidden>
               <p>
@@ -705,7 +724,12 @@
               <span
                 >Kan ik bij Kraamzorg Mama combineren met kleine kinderen?</span
               >
-              <span class="faq-accordion__icon" aria-hidden="true">⌄</span>
+              <img
+                class="faq-accordion__icon"
+                src="assets/icons/Down arrow - FAQ.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
             <div class="faq-accordion__panel" id="faq-panel-4" hidden>
               <p>
@@ -719,7 +743,10 @@
     </main>
 
     <footer class="bg-mama-pink text-white">
-      <section id="aanvragen" class="bg-mama-soft py-[3rem] text-mama-text">
+      <section
+        id="aanvragen"
+        class="bg-mama-soft pb-[3rem] pt-[4.375rem] text-mama-text"
+      >
         <div class="mx-auto max-w-[75rem] px-[1.5rem] text-center">
           <h2 class="text-[1.5rem] text-mama-pink">
             <span class="block md:inline"

@@ -73,8 +73,8 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("assets/images/careers-hero-full.jpg");
   background-position: 72% top;
   background-repeat: no-repeat;
-  background-size: auto 24rem;
-  padding-top: 24rem;
+  background-size: auto 17rem;
+  padding-top: 13.5rem;
 }
 
 .career-hero__content {
@@ -118,8 +118,34 @@ h1, h2, h3, h4, h5, h6 {
   right: 1.5rem;
 }
 
+.video-tile::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 624.9375rem;
+  background: rgb(255 255 255 / 0.35);
+  transform: translate(-50%, -50%);
+}
+
+.video-tile::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  border-block: 0.75rem solid transparent;
+  border-left: 1.1rem solid white;
+  transform: translate(-35%, -50%);
+}
+
 .video-tile > div {
-  display: none;
+  display: block;
+  position: absolute;
+  z-index: 3;
 }
 
 .work-profile-card {
@@ -168,8 +194,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .story-carousel .story-card {
-  flex: 0 0 304px;
-  height: 333px;
+  flex: 0 0 19rem;
+  height: 20.8125rem;
 }
 
 .review-carousel .story-carousel__track {
@@ -213,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
 .story-carousel__control {
   align-items: center;
   background: #fff;
-  border-radius: 999px;
+  border-radius: 62.4375rem;
   box-shadow: 0 0.25rem 0.75rem rgb(47 47 53 / 16%);
   cursor: pointer;
   display: flex;
@@ -253,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .story-carousel__dots button {
   background: #d8d8d8;
-  border-radius: 999px;
+  border-radius: 62.4375rem;
   height: 0.55rem;
   width: 0.55rem;
 }
@@ -271,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .story-card img {
-  height: 333px;
+  height: 20.8125rem;
   object-fit: cover;
   width: 100%;
 }
@@ -283,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-links a {
   background: #fff;
-  border-radius: 999px;
+  border-radius: 62.4375rem;
   display: grid;
   height: 3rem;
   place-items: center;
@@ -324,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-accordion__item + .faq-accordion__item {
-  border-top: 1px solid currentColor;
+  border-top: 0.0625rem solid currentColor;
 }
 
 .faq-accordion__trigger {
@@ -339,10 +365,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-accordion__icon {
-  color: var(--mama-pink);
   flex: 0 0 auto;
+  height: 0.694rem;
   margin-left: 1rem;
   transition: transform 160ms ease;
+  width: 1.136rem;
 }
 
 .faq-accordion__trigger[aria-expanded="true"] .faq-accordion__icon {
@@ -361,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .story-carousel .story-card {
-    flex-basis: 304px;
+    flex-basis: 19rem;
   }
 
   .review-carousel .review-card {
@@ -371,6 +398,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 47.999rem) {
   .story-carousel .story-card {
-    flex-basis: min(304px, 100%);
+    flex-basis: min(19rem, 100%);
   }
 }
