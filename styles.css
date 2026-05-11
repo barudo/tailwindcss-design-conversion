@@ -193,6 +193,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 47.999rem) {
+  .mobile-left-menu-nav {
+    justify-content: center;
+  }
+
+  .mobile-left-menu-nav .mobile-menu__button {
+    left: 1.5rem;
+    position: absolute;
+  }
+
+  .mobile-left-menu-nav .mobile-menu {
+    left: 1.5rem;
+    right: auto;
+  }
+
   .about-feature__image {
     order: -1;
   }
