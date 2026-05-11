@@ -22,11 +22,6 @@ body {
   color: var(--mama-text);
 }
 
-/* Apply RO Sans font to navigation links */
-nav a {
-  font-family: 'RO Sans', Calibri, sans-serif;
-}
-
 /* Apply Ubuntu Bold font to main headers */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
@@ -69,6 +64,26 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.mobile-menu__button {
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  font-size: 2.25rem;
+  height: 3rem;
+  justify-content: center;
+  line-height: 1;
+  row-gap: 0.35rem;
+  width: 3rem;
+}
+
+.mobile-menu__button span {
+  background: currentColor;
+  border-radius: 62.4375rem;
+  display: block;
+  height: 0.18rem;
+  width: 1.75rem;
+}
+
 .career-hero {
   background-image: url("assets/images/careers-hero-full.jpg");
   background-position: 72% top;
@@ -81,7 +96,24 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
 }
 
+.career-hero__card {
+  box-shadow: none;
+}
+
+.career-hero__cta {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 22rem;
+  min-height: 3.5rem;
+  width: 100%;
+}
+
 @media (min-width: 48rem) {
+  .mobile-menu__button {
+    display: none;
+  }
+
   .mobile-menu {
     display: none;
   }
@@ -94,6 +126,18 @@ h1, h2, h3, h4, h5, h6 {
 
   .career-hero__content {
     background: transparent;
+  }
+
+  .career-hero__card {
+    box-shadow: 0 0.375rem 1rem rgb(47 47 53 / 16%);
+  }
+
+  .career-hero__cta {
+    display: inline-flex;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: auto;
+    width: auto;
   }
 }
 
@@ -148,18 +192,18 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 3;
 }
 
-.work-profile-card {
-  display: flex;
-  flex-direction: column;
-}
+@media (max-width: 47.999rem) {
+  .about-feature__image {
+    order: -1;
+  }
 
-.work-profile-card ul {
-  flex: 1;
-}
+  .index-video-section .video-tile {
+    order: -1;
+  }
 
-.work-profile-card a {
-  margin-top: auto;
-  padding-top: 1.5rem;
+  .review-split--image-mobile-first .video-tile {
+    order: -1;
+  }
 }
 
 .vacancy-list li {
@@ -333,6 +377,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 2rem;
 }
 
+.contact-heading {
+  font-family: MamaSans, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.contact-heading strong {
+  font-weight: 900;
+}
+
 @media (max-width: 47.999rem) {
   .contact-links {
     align-items: flex-start;
@@ -349,8 +402,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.faq-accordion {
+  background: #f8f8f8;
+  border-color: #d1d1d1;
+}
+
 .faq-accordion__item + .faq-accordion__item {
-  border-top: 0.0625rem solid currentColor;
+  border-top: 0.0625rem solid #d1d1d1;
 }
 
 .faq-accordion__trigger {
