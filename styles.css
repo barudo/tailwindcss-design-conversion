@@ -20,6 +20,7 @@ html {
 body {
   font-family: MamaSans, Arial, Helvetica, sans-serif;
   color: var(--mama-text);
+  overflow-x: clip;
 }
 
 /* Apply Ubuntu Bold font to main headers */
@@ -76,13 +77,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 3rem;
 }
 
-.mobile-menu__button span {
-  background: currentColor;
-  border-radius: 62.4375rem;
-  display: block;
-  height: 0.18rem;
-  width: 1.75rem;
-}
 
 .career-hero {
   background-image: url("assets/images/careers-hero-full.jpg");
@@ -193,24 +187,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 47.999rem) {
-  .mobile-left-menu-nav {
-    justify-content: center;
-  }
-
-  .mobile-left-menu-nav .mobile-menu__button {
-    left: 1.5rem;
-    position: absolute;
-  }
-
-  .mobile-left-menu-nav .mobile-menu {
-    left: 1.5rem;
-    right: auto;
-  }
-
-  .about-feature__image {
-    order: -1;
-  }
-
   .index-video-section .video-tile {
     order: -1;
   }
@@ -218,23 +194,19 @@ h1, h2, h3, h4, h5, h6 {
   .review-split--image-mobile-first .video-tile {
     order: -1;
   }
+
+  .about-feature__image {
+    order: -1;
+  }
+
+  header nav > a:first-child {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.vacancy-list li {
-  align-items: center;
-  column-gap: 0.875rem;
-  display: flex;
-}
-
-.vacancy-list img {
-  flex: none;
-  height: 0.75rem;
-  width: auto;
-}
-
-#stories {
-  max-width: 87rem;
-}
 
 .story-carousel {
   padding-inline: 2.75rem;
@@ -472,4 +444,21 @@ h1, h2, h3, h4, h5, h6 {
   .story-carousel .story-card {
     flex-basis: min(19rem, 100%);
   }
+}
+
+.list-check-icon {
+  flex: none;
+  height: 1rem;
+  margin-top: 0.2rem;
+  width: 1rem;
+}
+
+#stories {
+  max-width: 87rem;
+}
+
+.hero-card-overlap {
+  margin-top: -4rem;
+  position: relative;
+  z-index: 1;
 }
